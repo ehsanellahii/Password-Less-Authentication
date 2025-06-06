@@ -96,6 +96,6 @@ export async function POST(req: any) {
     });
   } catch (error) {
     console.error('Authentication challenge error:', error);
-    return NextResponse.json({ error: 'Failed to generate authentication options' }, { status: 500 });
+    return NextResponse.json({ error }, { status: 500 });
   }
 }

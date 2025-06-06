@@ -117,7 +117,7 @@ export async function POST(req: any) {
     console.error('Authentication verification error:', error);
     return NextResponse.json(
       {
-        error: 'An error occurred during authentication verification',
+        error,
       },
       {
         status: 500,

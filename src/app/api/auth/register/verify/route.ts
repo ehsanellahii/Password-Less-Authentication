@@ -123,7 +123,7 @@ export async function POST(req: any) {
     console.error('Registration verification error:', error);
     return NextResponse.json(
       {
-        error: 'An error occurred during registration verification',
+        error: error,
       },
       {
         status: 500,

@@ -66,6 +66,6 @@ export async function POST(req: any) {
     });
   } catch (error) {
     console.error('Registration challenge error:', error);
-    return NextResponse.json({ error: 'Failed to generate registration options' }, { status: 500 });
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }
