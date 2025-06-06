@@ -36,6 +36,7 @@ export default function WebAuthnRegister() {
       const options = await response.json();
 
       if (!response.ok) {
+        console.log('Failed to get registration options:', await response.json());
         throw new Error(options.error || 'Failed to get registration options');
       }
 
